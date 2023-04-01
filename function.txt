@@ -24,3 +24,68 @@ public class Class1 {
 	}
 	
 }
+package FunctionAss;
+
+import java.util.Scanner;
+
+/*create another class having main method
+display menu
+1) cube
+2) square
+3) greater
+Ask choice from user and based on choice call above methods
+Repeat the menu till choice is not equal to 0
+*/
+public class Class1Relate {
+
+	public static void main(String[] args) {
+		int input ; int forward;
+		Scanner sc = new Scanner(System.in);
+		
+		Class1 xyz = new Class1();
+		for(;;) {
+			System.out.println("Enter 1 for choice operation and 0 for Exit ");
+			forward = sc.nextInt();
+			System.out.println(" <<< Menu >>>\r\n" + 
+					"1) cube\r\n" + 
+					"2) square\r\n" + 
+					"3) greater");
+			input = sc.nextInt();
+			
+		if(forward == 1) {
+			switch(input)
+			{
+			case 1:
+				int cube;
+				System.out.println("Enter value for cube >> ");
+				cube=sc.nextInt();
+				xyz.cube(cube);
+				break;
+			case 2:
+				int square;
+				System.out.println("Enter value for square >> ");
+				square= sc.nextInt();
+				xyz.square(square);
+				break;
+			case 3:
+				int Greater1; int Greater2; int Greater3;
+				System.out.println("Enter values for Greater number>> ");
+				Greater1 = sc.nextInt();
+				Greater2 = sc.nextInt();
+				Greater3 = sc.nextInt();
+				xyz.greater(Greater1, Greater2, Greater3);
+				break;
+			default:
+				System.out.println("<<<<INVALID CHOICE>>>>");
+				break;
+			}
+			}else {
+					System.exit(0);
+				  }
+		}
+	}
+	
+}
+
+
+
